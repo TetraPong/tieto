@@ -1,3 +1,4 @@
+
 checklist = [('name', 'John', 'John'),
              ('middle_name', '', None),
              ('last_name', 'Smith', ' Smith'),
