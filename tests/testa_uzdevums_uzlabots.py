@@ -12,7 +12,8 @@ def check_list_data():
     return checklist
 
 
-def test_compareFields(check_list_data):
+def test_compare_fields(check_list_data):
+
     for item in check_list_data:
         field = item[0]
         expected = item[1] if item[1] else None

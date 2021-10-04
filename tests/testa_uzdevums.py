@@ -25,6 +25,7 @@ def compare_fields(checklist):
 
 def test_list():
     errors = compare_fields(checklist)
+
     if errors:
         print('Account verification failed:\n' + errors)
     else:
