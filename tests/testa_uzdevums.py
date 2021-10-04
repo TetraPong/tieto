@@ -29,4 +29,4 @@ def test_list():
     if errors:
         print('Account verification failed:\n' + errors)
     else:
-        print('Account verification passed')
+        print('Account verification successful')
