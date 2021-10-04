@@ -1,20 +1,14 @@
-import pytest
+checklist = [('name', 'John', 'John'),
+             ('middle_name', '', None),
+             ('last_name', 'Smith', ' Smith'),
+             ('email', 'johnsmith@example.com', 'john.smith@example.com'),
+             ('password', '5f4dcc3b5aa765d61d8327deb882cf99', 'dc647eb65e6711e155375218212b3964'), ]
 
 
-@pytest.fixture()
-def check_list_data():
-    checklist = [('name', 'John', 'John'),
-                 ('middle_name', '', None),
-                 ('last_name', 'Smith', ' Smith'),
-                 ('email', 'johnsmith@example.com', 'john.smith@example.com'),
-                 ('password', '5f4dcc3b5aa765d61d8327deb882cf99', 'dc647eb65e6711e155375218212b3964'), ]
-    return checklist
-
-
-def compareFields(check_list_data):
+def compareFields(checklist):
     errors = list()
 
-    for item in check_list_data:
+    for item in checklist:
         field = item[0]
         expected = item[1] if item[1] else None
         actual = item[2] if item[2] else None
@@ -28,8 +22,8 @@ def compareFields(check_list_data):
         return None
 
 
-def test_list(check_list_data):
-    errors = compareFields(check_list_data)
+def test_list():
+    errors = compareFields(checklist)
     if errors:
         print('Account verification failed:\n' + errors)
     else:
