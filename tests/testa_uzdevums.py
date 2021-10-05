@@ -6,7 +6,7 @@ checklist = [('name', 'John', 'John'),
              ('password', '5f4dcc3b5aa765d61d8327deb882cf99', 'dc647eb65e6711e155375218212b3964'), ]
 
 
-def compare_fields(checklist):
+def input_check(checklist):
     errors = list()
 
     for item in checklist:
@@ -23,8 +23,8 @@ def compare_fields(checklist):
         return None
 
 
-def test_list():
-    errors = compare_fields(checklist)
+def test_checklist():
+    errors = input_check(checklist)
 
     if errors:
         print('Account verification failed:\n' + errors)
