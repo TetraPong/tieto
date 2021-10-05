@@ -12,7 +12,7 @@ def check_list_data():
     return checklist
 
 
-def test_compare_fields(check_list_data):
+def test_input_fields(check_list_data):
 
     for item in check_list_data:
         field = item[0]
